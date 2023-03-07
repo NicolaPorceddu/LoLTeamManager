@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_player">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_go_back"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ricerca giocatore"/>
+        </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="true"
+                android:background="@color/backgroundColor">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/search"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    app:iconifiedByDefault="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10pt"
+                android:layout_marginLeft="10pt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="left"
+                        android:text="RISULTATI:"
+                        android:textSize="10pt"/>
+
+                    <LinearLayout
+                        android:id="@+id/icon_filters"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="157dp"
+                        android:clickable="true"
+                        android:layout_gravity="right">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFFFFF"
+                            android:text="FILTRI"
+                            android:textSize="10pt"/>
+                        <ImageView
+                            android:layout_width="15pt"
+                            android:layout_height="15pt"
+                            android:background="@drawable/ic_filter"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:id="@+id/risultati"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nessun risultato trovato"
+                android:textColor="@color/textColor"/>
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="55dp"
+                android:background="@color/backgroundColor">
+
+                <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recycleMember"/>
+
+            </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/filterLayout"
+        android:visibility="gone"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Scegli il rank:"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank2"
+                            android:text="Iron"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank3"
+                            android:text="Bronze"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank4"
+                            android:text="Silver"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank5"
+                            android:text="Gold"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank6"
+                            android:text="Platinum"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="50dp">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank7"
+                            android:text="Diamond"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank8"
+                            android:text="Master"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank9"
+                            android:text="Grandmaster"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/rank10"
+                            android:text="Challanger"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+                </LinearLayout> <!-- fine orizzontale rank-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Scegli i ruoli:"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/ruolo1"
+                            android:text="Toplaner"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/ruolo2"
+                            android:text="Jungler"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/ruolo3"
+                            android:text="Midlaner"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="50dp">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"/>
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/ruolo4"
+                            android:text="Botlaner"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/ruolo5"
+                            android:text="Support"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+                </LinearLayout> <!--fine orizzontale ruoli-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona:"/>
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/textColor"
+                        android:buttonTint="@color/textColor"
+                        android:text="Solo giocatori\nsenza squadra"
+                        android:layout_marginLeft="50dp"
+                        android:onClick="onRadioButtonClicked"/>
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Tutti"
+                        android:textColor="@color/textColor"
+                        android:buttonTint="@color/textColor"
+                        android:layout_marginLeft="85dp"
+                        android:onClick="onRadioButtonClicked"/>
+                </RadioGroup>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona il livello:"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello1"
+                            android:text="meno di 30"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello2"
+                            android:text="30-59"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello3"
+                            android:text="60-89"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="70dp">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"/>
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello4"
+                            android:text="90-119"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello5"
+                            android:text="120-149"
+                            android:buttonTint="@color/textColor"/>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/livello6"
+                            android:text="oltre 150"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+                </LinearLayout> <!--fine orizzontale livello-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona l'età:"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta1"
+                            android:text="meno di 18"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta2"
+                            android:text="18-24"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta3"
+                            android:text="25-29"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="70dp">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"/>
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta4"
+                            android:text="30-34"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta5"
+                            android:text="35-39"
+                            android:buttonTint="@color/textColor"/>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/eta6"
+                            android:text="oltre 40"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+                </LinearLayout> <!--fine orizzontale eta-->
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/editTextColor"
+                    android:text="RICERCA"
+                    android:textColor="@color/textColor"
+                    android:textSize="18dp"
+                    android:id="@+id/ricercaBottone"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+            </LinearLayout> <!--verticale del resto pagina-->
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_nav_profile"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/editTextColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/bottomHomeProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottomMsgProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_message" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messaggio"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomFriendsProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_member_list" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amici"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

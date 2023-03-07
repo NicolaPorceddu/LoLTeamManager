@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.TeamProfile">
+    <item
+        android:id="@+id/settings"
+        android:title="Modifica team"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settings_members"
+        android:title="Modifica membri"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/announce"
+        android:title="Nuovo annuncio"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

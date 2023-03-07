@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#00162b</color>
+    <color name="colorPrimary">#043667</color>
+    <color name="colorPrimaryDark">#FF001F3D</color>
+    <color name="textColor">#62aac4</color>
+    <color name="editTextColor">#012c54</color>
+    <color name="errorColor">#ff0000</color>
+    <color name="todayLabel">#0000ff</color>
+</resources>

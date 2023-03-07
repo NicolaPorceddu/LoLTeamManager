@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@color/editTextColor"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:id="@+id/imgPlayer"
+            android:src="@drawable/avatar"
+            android:layout_marginRight="5pt"
+            android:layout_marginBottom="10pt"
+            android:background="@drawable/profile_img_style"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="23sp"
+                    android:text="Benvenuto!"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileName"
+                    android:textColor="@color/textColor"
+                    android:textSize="21sp"
+                    android:text=""/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LoL Team Manager"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"/>
+
+</LinearLayout>

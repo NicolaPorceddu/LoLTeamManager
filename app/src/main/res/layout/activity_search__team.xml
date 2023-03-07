@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_Team">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_go_back"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ricerca team"/>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="true"
+            android:background="@color/backgroundColor">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:iconifiedByDefault="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10pt"
+            android:layout_marginLeft="10pt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="left"
+                    android:text="RISULTATI:"
+                    android:textSize="10pt"/>
+                <LinearLayout
+                    android:id="@+id/icon_filters"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="157dp"
+                    android:clickable="true"
+                    android:layout_gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="FILTRI"
+                        android:textSize="10pt"/>
+
+                    <ImageView
+                        android:layout_width="15pt"
+                        android:layout_height="15pt"
+                        android:background="@drawable/ic_filter"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/textViewToolbarStyle"
+            android:id="@+id/risultati"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nessun risultato trovato"
+            android:textColor="@color/textColor"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:background="@color/backgroundColor">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycleTeam" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/filterLayout"
+        android:visibility="gone"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona il rank:"/>
+
+                <Spinner
+                    android:id="@+id/spinnerRank"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:spinnerMode="dialog"
+                    android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+                    android:gravity="center"
+                    android:outlineAmbientShadowColor="@color/textColor"
+                    android:outlineSpotShadowColor="@color/textColor"
+                    android:popupBackground="@color/editTextColor"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona le lingue:"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua1"
+                            android:text="Italiano"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua2"
+                            android:text="Inglese"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua3"
+                            android:text="Francese"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="50dp">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"/>
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua4"
+                            android:text="Tedesco"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua5"
+                            android:text="Russo"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/lingua6"
+                            android:text="Cinese"
+                            android:buttonTint="@color/textColor"/>
+                    </LinearLayout>
+                </LinearLayout> <!--fine orizzontale ruoli-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona:"/>
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/textColor"
+                        android:buttonTint="@color/textColor"
+                        android:text="Solo squadre\nincomplete"
+                        android:layout_marginLeft="50dp"
+                        android:onClick="onRadioButtonClicked"/>
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Tutte"
+                        android:textColor="@color/textColor"
+                        android:buttonTint="@color/textColor"
+                        android:layout_marginLeft="85dp"
+                        android:onClick="onRadioButtonClicked"/>
+                </RadioGroup>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/editTextColor"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:textSize="23sp"
+                    android:text="Seleziona VoiceChat:"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/voice1"
+                            android:text="Discord"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/voice2"
+                            android:text="LoL VoiceChat"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                        <CheckBox style="@style/checkBoxStyle"
+                            android:id="@+id/voice3"
+                            android:text="TeamSpeak"
+                            android:buttonTint="@color/textColor"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp" />
+                    </LinearLayout>
+                </LinearLayout> <!--fine orizzontale livello-->
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/editTextColor"
+                    android:text="RICERCA"
+                    android:textColor="@color/textColor"
+                    android:textSize="18dp"
+                    android:id="@+id/ricercaBottone"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+            </LinearLayout> <!--verticale del resto pagina-->
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_nav_profile"
+        android:orientation="horizontal"
+        android:background="@color/editTextColor"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomHomeProfile"
+            android:orientation="vertical"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_home"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="Home"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomMsgProfile"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="70dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_message" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="Messaggio"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomFriendsProfile"
+            android:orientation="vertical"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_member_list" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="Amici"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InserimentoAnnuncio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_go_back"
+            android:theme="@style/AppTheme">
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuovo annuncio"/>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/backgroundColor"
+                android:gravity="center">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10pt"
+                    android:text="Inserimento annuncio"
+                    android:textColor="@color/textColor"
+                    android:textSize="35sp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Che ruolo cerchi?"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb1"
+                    android:text="Toplaner"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb2"
+                    android:text="Jungler"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb3"
+                    android:text="Midlaner"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb4"
+                    android:text="Botlaner"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb5"
+                    android:text="Support"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Rank minimo" />
+
+                <EditText style="@style/editTextStyle"
+                    android:id="@+id/rankmin" />
+
+                <Space style="@style/normalSpace" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Rank massimo"/>
+
+                <EditText style="@style/editTextStyle"
+                    android:id="@+id/rankmax" />
+
+                <Space style="@style/normalSpace" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Età" />
+
+                <EditText style="@style/editTextStyle"
+                    android:id="@+id/age"
+                    android:inputType="number"/>
+
+                <Space style="@style/normalSpace" />
+
+                <TextView
+                    android:id="@+id/errore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/errorColor"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:visibility="gone"/>
+
+                <Space style="@style/normalSpace" />
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/editTextColor"
+                    android:text="Inserisci"
+                    android:textColor="@color/textColor"
+                    android:textSize="18dp"
+                    android:id="@+id/inserisci"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

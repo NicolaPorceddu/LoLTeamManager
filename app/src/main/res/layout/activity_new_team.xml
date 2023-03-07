@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewTeam">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_go_back"
+            android:theme="@style/AppTheme">
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuovo team"/>
+        </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/backgroundColor"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10pt"
+                    android:text="Creazione team"
+                    android:textColor="@color/textColor"
+                    android:textSize="35sp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Nome" />
+
+                <EditText style="@style/editTextStyle"
+                    android:id="@+id/nome" />
+
+                <Space style="@style/normalSpace" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Lingua"/>
+
+                <EditText style="@style/editTextStyle"
+                    android:id="@+id/lingua" />
+
+                <Space style="@style/normalSpace" />
+
+                <TextView style="@style/textViewStyle"
+                    android:text="Voice chat" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb1"
+                    android:text="LoL VoiceChat"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb2"
+                    android:text="Discord"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <CheckBox style="@style/checkBoxStyle"
+                    android:id="@+id/cb3"
+                    android:text="TeamSpeak"
+                    android:buttonTint="@color/textColor"/>
+
+                <Space style="@style/normalSpace" />
+
+                <Space style="@style/normalSpace" />
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/editTextColor"
+                    android:text="crea"
+                    android:textColor="@color/textColor"
+                    android:textSize="18dp"
+                    android:id="@+id/crea"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

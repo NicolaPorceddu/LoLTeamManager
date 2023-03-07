@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profilo" />
+
+        <item
+            android:id="@+id/nav_team"
+            android:icon="@drawable/ic_team"
+            android:title="Team"/>
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_calendar"
+            android:title="Calendario" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_message"
+            android:title="Chat" />
+
+        <item
+            android:id="@+id/nav_lista_amici"
+            android:icon="@drawable/ic_friends"
+            android:title="Lista amici" />
+
+        <item
+            android:id="@+id/nav_ricerca_player"
+            android:icon="@drawable/search_player"
+            android:title="Ricerca player" />
+
+        <item
+            android:id="@+id/nav_ricerca_team"
+            android:icon="@drawable/search_team"
+            android:title="Ricerca team" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+</menu>

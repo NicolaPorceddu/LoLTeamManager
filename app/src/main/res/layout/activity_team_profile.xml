@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_go_back"
+            android:theme="@style/AppTheme">
+
+            <TextView style="@style/textViewToolbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team"/>
+        </android.support.v7.widget.Toolbar>
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="55dp"
+                android:background="@color/backgroundColor">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Space style="@style/normalSpace" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <TextView style="@style/textViewProfileStyle"
+                                android:id="@+id/teamInfo"
+                                android:text=""/>
+
+                            <ImageView
+                                android:layout_width="50pt"
+                                android:layout_height="50pt"
+                                android:id="@+id/imgPlayer"
+                                android:src="@drawable/avatar"
+                                android:layout_marginRight="10pt"
+                                android:background="@drawable/profile_img_style"/>
+
+                        </LinearLayout>
+
+                        <Space style="@style/normalSpace" />
+                        <Space style="@style/normalSpace" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Membri"
+                                android:textColor="@color/textColor"
+                                android:textSize="25sp"
+                                android:layout_marginLeft="10pt"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/membersLayout">
+
+                            </LinearLayout>
+
+                            <Space style="@style/normalSpace"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/editTextColor"/>
+
+                            <Space style="@style/normalSpace"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lingue e voice chat"
+                                android:textColor="@color/textColor"
+                                android:textSize="25sp"
+                                android:layout_marginLeft="10pt"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/infoChat"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp"
+                                android:layout_marginLeft="10pt"
+                                android:text=""/>
+
+                            <Space style="@style/normalSpace"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/editTextColor"/>
+
+                            <Space style="@style/normalSpace"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Statistiche"
+                                android:textColor="@color/textColor"
+                                android:textSize="25sp"
+                                android:layout_marginLeft="10pt"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/stats"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp"
+                                android:layout_marginLeft="10pt"
+                                android:text=""/>
+
+                            <Space style="@style/normalSpace" />
+
+                        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_nav_team"
+        android:orientation="horizontal"
+        android:background="@color/editTextColor"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomHomeTeam"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_home"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text="Home"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomMsgTeam"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="70dp"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_message" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text="Messaggio"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomMembersTeam"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_member_list" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text="Membri"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

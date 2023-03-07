@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Registrazione">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_go_back"
+        android:theme="@style/AppTheme">
+
+        <TextView style="@style/textViewToolbarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrazione"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/backgroundColor"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10pt"
+                android:text="Benvenuto!"
+                android:textColor="@color/textColor"
+                android:textSize="35sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Username" />
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/user" />
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="InGame name"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/ingamename" />
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Password" />
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/psw"
+                android:inputType="textPassword"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Indirizzo e-mail"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/email"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Età"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/age"
+                android:inputType="number"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="KDA"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp">
+
+                <EditText style="@style/editTextKDAStyle"
+                    android:id="@+id/k"
+                    android:inputType="numberDecimal"/>
+                <EditText style="@style/editTextKDAStyle"
+                    android:id="@+id/d"
+                    android:inputType="numberDecimal"/>
+                <EditText style="@style/editTextKDAStyle"
+                    android:id="@+id/a"
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+
+            <Space style="@style/normalSpace"/>
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Rank"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/rank"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Divisione Rank"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/divisione"
+                android:inputType="number"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Livello"/>
+
+            <EditText style="@style/editTextStyle"
+                android:id="@+id/livello"
+                android:inputType="number"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView style="@style/textViewStyle"
+                android:textSize="23sp"
+                android:text="Scegli i tuoi ruoli:"/>
+
+            <Space style="@style/normalSpace" />
+
+            <TextView
+                android:id="@+id/errore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ERRORE! Inserire almeno un ruolo."
+                android:textColor="@color/errorColor"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <CheckBox style="@style/checkBoxStyle"
+                android:id="@+id/cb1"
+                android:text="Toplaner"
+                android:buttonTint="@color/textColor"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <CheckBox style="@style/checkBoxStyle"
+                android:id="@+id/cb2"
+                android:text="Jungler"
+                android:buttonTint="@color/textColor"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <CheckBox style="@style/checkBoxStyle"
+                android:id="@+id/cb3"
+                android:text="Midlaner"
+                android:buttonTint="@color/textColor"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <CheckBox style="@style/checkBoxStyle"
+                android:id="@+id/cb4"
+                android:text="Botlaner"
+                android:buttonTint="@color/textColor"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <CheckBox style="@style/checkBoxStyle"
+                android:id="@+id/cb5"
+                android:text="Support"
+                android:buttonTint="@color/textColor"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/editTextColor"
+                android:text="registrati"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:id="@+id/registrati"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

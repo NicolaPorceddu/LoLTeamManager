@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.Profile">
+    <item
+        android:id="@+id/createTeam"
+        android:title="Crea un nuovo team"
+        android:visible="false"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/add_friend"
+        android:title="Aggiungi agli amici"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_team"
+        android:title="Aggiungi al team"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

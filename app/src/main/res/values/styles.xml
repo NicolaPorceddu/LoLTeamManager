@@ -1,0 +1,102 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="actionOverflowButtonStyle">@style/overflowButton</item>
+    </style>
+
+    <style name="overflowButton" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">#FFFFFF</item>
+    </style>
+
+    <style name="textViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">20pt</item>
+        <item name="android:layout_marginBottom">3pt</item>
+    </style>
+
+    <style name="textViewToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10pt</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="textViewProfileStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5pt</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/editTextColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/edit_text_style</item>
+    </style>
+
+    <style name="editTextKDAStyle">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/editTextColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/edit_text_style</item>
+    </style>
+
+    <style name="imageProfileListStyle">
+        <item name="android:layout_width">20pt</item>
+        <item name="android:layout_height">20pt</item>
+        <item name="android:layout_marginLeft">35pt</item>
+    </style>
+
+    <style name="textViewProfileListStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">10pt</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="checkBoxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">25pt</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="toolbarStyle">
+        <item name="android:background">@color/editTextColor</item>
+    </style>
+
+    <style name="normalSpace">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
+
